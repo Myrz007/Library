@@ -1,0 +1,66 @@
+html {
+    width: 100vw;
+}
+
+header {
+    min-width: 580px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+button {
+    border-radius: 8px;
+}
+
+dialog {
+    width: 40%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#newbook {
+    height: 40px;
+    width: 120px;
+    font-size: 16px;
+}
+
+#books {
+    height: 100%;
+    min-width: 580px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 50px;
+    background-color: #855307;
+}
+
+.book {
+    min-width: 130px;
+    box-shadow: 6px 6px 2px #151515;
+    background-color: antiquewhite;
+    padding: 20px;
+    overflow-wrap: break-word;
+}
+
+.buttoncontainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.read {
+    height: 30px;
+    width: 70px;
+    font-size: 14px;
+}
+
+.delete {
+    height: 30px;
+    width: 30px;
+    font-size: 14px;
+    background-color: red;
+}
