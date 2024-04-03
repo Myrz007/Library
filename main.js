@@ -23,16 +23,6 @@ const myLibrary = [
     new Book('Hunger Games', 'Suzanne Collins', 399, true)
 ];
 
-newBook.addEventListener('click', () => dialog.showModal());
-
-submit.addEventListener('click', (event) => {
-    event.preventDefault();
-    addBookToLibrary(title.value, author.value, Number(pages.value), read.checked);
-    form.reset();
-    dialog.close();
-    displayBook();
-});
-
 const addBookToLibrary = (title, author, pages, readStatus) => {
     myLibrary.push(new Book(title, author, pages, readStatus));
     return;
@@ -102,3 +92,13 @@ const displayBook= () => {
 }
 
 displayBook();
+
+newBook.addEventListener('click', () => dialog.showModal());
+
+submit.addEventListener('click', (event) => {
+    event.preventDefault();
+    addBookToLibrary(title.value, author.value, Number(pages.value), read.checked);
+    form.reset();
+    dialog.close();
+    displayBook();
+});
