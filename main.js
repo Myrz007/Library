@@ -7,6 +7,7 @@ const author  = document.querySelector('#author');
 const pages   = document.querySelector('#pages');
 const read    = document.querySelector('#read');
 const submit  = document.querySelector('input[type=submit]');
+const cancel  = document.querySelector('input[type=button]');
 
 class Book {
     constructor(title, author, pages, read = false) {
