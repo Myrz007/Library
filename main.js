@@ -33,20 +33,20 @@ submit.addEventListener('click', (event) => {
     displayBook();
 });
 
-function addBookToLibrary(title, author, pages, readStatus) {
+const addBookToLibrary = (title, author, pages, readStatus) => {
     myLibrary.push(new Book(title, author, pages, readStatus));
     return;
 }
 
-function changeReadStatus(bookObject) {
+const changeReadStatus = (bookObject) => {
     return `${bookObject.read ? 'R' : 'Not r'}ead`;
 }
 
-function changeButtonBackgroundColor(button, bookObject) {
+const changeButtonBackgroundColor = (button, bookObject) => {
     return `rgb(${bookObject.read ? '35, 220, 21' : '239, 239, 239'})`;
 }
 
-function createBookElement(bookObject) {
+const createBookElement = (bookObject) => {
     const bookElement     = document.createElement('div');
     const title           = document.createElement('h3');
     const author          = document.createElement('h4');
@@ -86,7 +86,7 @@ function createBookElement(bookObject) {
     return bookElement;
 }
 
-function displayBook() {
+const displayBook= () => {
     const myLibraryLength = myLibrary.length;
 
     if (books.childElementCount) books.innerHTML = '';
