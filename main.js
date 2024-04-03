@@ -8,6 +8,15 @@ const pages   = document.querySelector('#pages');
 const read    = document.querySelector('#read');
 const submit  = document.querySelector('input[type=submit]');
 
+class Book {
+    constructor(title, author, pages, read = false) {
+        this.title  = title;
+        this.author = author;
+        this.pages  = pages;
+        this.read   = read;
+    }
+}
+
 const myLibrary = [
     new Book('Harry Potter and the Philosopher\'s Stone', 'J.K. Rowling', 223, true),
     new Book('The Lord Of The Rings - The Fellowship of the Ring', 'J. R. R. Tolkien', 423),
@@ -23,13 +32,6 @@ submit.addEventListener('click', (event) => {
     dialog.close();
     displayBook();
 });
-
-function Book(title, author, pages, read = false) {
-    this.title  = title;
-    this.author = author;
-    this.pages  = pages;
-    this.read   = read;
-}
 
 function addBookToLibrary(title, author, pages, readStatus) {
     myLibrary.push(new Book(title, author, pages, readStatus));
