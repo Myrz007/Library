@@ -103,3 +103,5 @@ submit.addEventListener('click', (event) => {
     dialog.close();
     displayBook();
 });
+
+cancel.addEventListener('click', () => dialog.close());
